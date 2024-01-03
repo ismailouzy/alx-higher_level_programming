@@ -4,4 +4,4 @@ for i in range(122, 96, -1):
         temp = chr(i)
     else:
         temp = chr(i - 32)
-    print("".join(f"{temp}"), end="")
+    print("".join("{}".format(temp)), end="")

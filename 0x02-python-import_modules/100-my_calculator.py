@@ -4,8 +4,8 @@ from sys import argv, exit
 if __name__ == "__main__":
     lent = int(len(argv) - 1)
     if lent != 3:
-            print("Usage: ./100-my_calculator.py <a> <operator> <b>") 
-            exit(1)
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        exit(1)
     else:
         for i in range(1, lent + 1):
             a = int(argv[1])
@@ -19,6 +19,6 @@ if __name__ == "__main__":
             elif argv[2] == "/":
                 result = div(a, b)
             else:
-                print("Unknown operator. Available operators: +, -, * and /") 
+                print("Unknown operator. Available operators: +, -, * and /")
                 exit(1)
         print("{} {} {} = {}".format(a, argv[2], b, result))

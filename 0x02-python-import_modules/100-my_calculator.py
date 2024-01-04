@@ -20,6 +20,5 @@ if __name__ == "__main__":
                 result = div(a, b)
             else:
                 print("Unknown operator. Available operators: +, -, * and /") 
-                exit(1) 
-            
-    print("{}".format(result))
+                exit(1)
+        print("{} {} {} = {}".format(a, argv[2], b, result))

@@ -5,7 +5,7 @@ of a string and its first character."""
 
 def multiple_returns(sentence):
     if sentence == "":
-        sentence[0] = "None"
+        return (0, None)
     else:
         result = (len(sentence), sentence[0])
         return (result)

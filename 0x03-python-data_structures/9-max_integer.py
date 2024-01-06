@@ -4,10 +4,10 @@
 
 def max_integer(my_list=[]):
     if len(my_list) == 0:
-        return ("None")
+        return "None"
     else:
-        res = 0
+        res = my_list[0]
         for i in my_list:
-            if (i+1) > res:
+            if i > res:
                 res = i
     return (res)

@@ -63,7 +63,8 @@ class Rectangle:
             return ""
         elif self.__height == 0:
             return ""
-        return (str(self.print_symbol) * self.__width + "\n") * self.__height
+        ster = str(self.print_symbol) * self.width
+        return (ster + "\n") * (self.height - 1) + ster
 
     def __repr__(self):
         """repr"""

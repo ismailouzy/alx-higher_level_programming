@@ -17,7 +17,7 @@ Test One:
 >>> text_indentation("Hello: World")
 Hello:
 <BLANKLINE>
- World
+World
 
 Test Two:
 
@@ -43,13 +43,22 @@ Test five:
 	>>> text_indentation("""Hi. my name is: what? My name is. who? My name is:""")
 	Hi.
 	<BLANKLINE>
-	 my name is:
+	my name is:
 	<BLANKLINE>
-	 what?
+	what?
 	<BLANKLINE>
-	 My name is.
+	My name is.
 	<BLANKLINE>
-	 who?
+	who?
 	<BLANKLINE>
-	 My name is:
+	My name is:
 	<BLANKLINE>
+
+	>>> text_indentation("Holberton. School? How are you: John")
+	Holberton.
+	<BLANKLINE>
+	School?
+	<BLANKLINE>
+	How are you:
+	<BLANKLINE>
+	John

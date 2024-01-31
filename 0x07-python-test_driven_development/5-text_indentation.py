@@ -9,14 +9,16 @@ def text_indentation(text):
             text: the text to work on"""
     if type(text) is not str:
         raise TypeError("text must be a string")
+
     special_characters = {'.', '?', ':'}
     modified_text = ""
     newline_count = 0
-    for char in text.strip():
-        if char in " " and "\n\n\
-        " in modified_text and newline_count == 2 and char in "  ":
+
+    for char in text:
+        if char == ' ' and "\n\n" in modified_text and newline_count == 2:
             continue
         modified_text += char
+
         if char in special_characters:
             modified_text += "\n\n"
             newline_count = 2
@@ -24,4 +26,5 @@ def text_indentation(text):
             newline_count = 0
         elif newline_count > 0:
             newline_count -= 1
+
     print(modified_text, end="")

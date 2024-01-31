@@ -60,7 +60,13 @@ Test eight:
     98
 
 Test nine:
-    >>> add_integer(2, float('inf'))
+    >>> add_integer(5, float('inf'))
     Traceback (most recent call last):
     ...
     OverflowError: cannot convert float infinity to integer
+
+Test ten:
+    >>> add_integer(5, float('nan'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer

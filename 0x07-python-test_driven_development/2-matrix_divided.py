@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """a function that divides all elements of a matrix"""
 
 

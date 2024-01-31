@@ -1,10 +1,13 @@
 #!/usr/bin/python3
-"""a function that adds two integers"""
+"""a function that adds two integers
+
+
+
+"""
 
 
 def add_integer(a, b=98):
     """add the sum of two ints.
-
 
     """
     if type(a) is not int and type(a) is not float:

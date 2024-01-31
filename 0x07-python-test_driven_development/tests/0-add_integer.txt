@@ -1,0 +1,60 @@
+add_integer module
+===========================
+
+Write a function that adds 2 integers.
+
+*Prototype: def add_integer(a, b=98):
+*a and b must be integers or floats, otherwise raise a TypeError
+exception with the message a must be an integer or b must be an integer
+*a and b must be first casted to integers if they are float
+*Returns an integer: the addition of a and b
+=============================================
+
+Import module:
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Test one:
+    >>> add_integer(5, 1)
+    6
+
+Test two:
+    >>> add_integer(100, -2)
+    98
+
+Test two - one:
+    >>> add_integer(-2, 90)
+    88
+
+Test two - two:
+    >>> add_integer(-2, -2)
+    -4
+
+Test three:
+    >>> add_integer(2)
+    100
+
+Test four:
+    >>> add_integer(100.1, -2)
+    98
+
+Test five:
+    >>> add_integer(4, "Holberton")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+Test six:
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test seven:
+    >>> add_integer("Salam", 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Test eight:
+    >>> add_integer(0)
+    98

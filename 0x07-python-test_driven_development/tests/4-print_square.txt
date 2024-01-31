@@ -1,0 +1,46 @@
+print_square module
+======================
+
+*Write a function that prints My name is <first name> <last name>
+
+    *Prototype: def print_square(first_name, last_name=""):
+    *first_name and last_name must be strings otherwise, raise a TypeError 
+    exception with the message first_name must be a string or last_name must be a string
+============================================================================================
+
+>>> print_square = __import__('4-print_square').print_square
+
+Test one :
+>>> print_square(6)
+######
+######
+######
+######
+######
+######
+
+Test two :
+>>> size = -40
+>>> print_square(size)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+Test three :
+>>> size = None
+>>> print_square(size)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Test four :
+>>> size = 123.1
+>>> print_square(size)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+Test five :
+>>> size = 0
+>>> print_square(size)
+>>> 

@@ -4,9 +4,9 @@
 import unittest
 max_integer = __import__('6-max_integer').max_integer
 
-class TestMaxInteger(unittest.TestCase):
+class TestMaxIntegef(unittest.TestCase):
     """Unitests class"""
-    def Testcases(self):
+    def test_cases(self):
         """test cases for max integer"""
         self.assertIsNone(max_integer([]))
         self.assertEqual(max_integer([1, 2, 3, 4, 5]), 5)

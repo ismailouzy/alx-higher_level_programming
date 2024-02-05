@@ -1,0 +1,37 @@
+my_list module
+===========================
+
+Write a class MyList that inherits from list:
+
+Public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort)
+You can assume that all the elements of the list will be of type int
+=============================================
+
+>>> MyList = __import__('1-my_list').MyList
+
+# Test 1:
+>>> empty_list = MyList()
+>>> print(empty_list)
+[]
+
+# Test 2:
+>>> empty_list.print_sorted()
+[]
+
+# Test 3:
+>>> r_list = MyList([3, 1, 4, 2, 3, 5, 4])
+>>> r_list.append(0)
+>>> print(r_list)
+[3, 1, 4, 2, 3, 5, 4, 0]
+>>> r_list.print_sorted()
+[0, 1, 2, 3, 3, 4, 4, 5]
+
+# Test 4:
+>>> negative_list = MyList([-3, 1, -4, 2, -5])
+>>> negative_list.append(-2)
+
+>>> print(negative_list)
+[-3, 1, -4, 2, -5, -2]
+
+>>> negative_list.print_sorted()
+[-5, -4, -3, -2, 1, 2]

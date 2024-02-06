@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""wrting a file
+
+"""
 
 
 def write_file(filename="", text=""):

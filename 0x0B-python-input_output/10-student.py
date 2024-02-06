@@ -24,8 +24,10 @@ class Student:
             for i in attrs:
                 if type(i) is not str:
                     return self.__dict__
-        stu_dict = {}
-        for j in attrs:
-            if hasattr(self, j):
-                stu_dict[j] = getattr(self, j)
-        return stu_dict
+        if attrs is not None and all(isinstance(attr, str) for attr in attrs):
+            stu_dict = {}
+            for j in attrs:
+                if hasattr(self, j):
+                    stu_dict[j] = getattr(self, j)
+            return stu_dict
+        return self.__dict__

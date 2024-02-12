@@ -57,7 +57,7 @@ class Base:
         try:
             with open(smiya, "r") as file:
                 data = file.read()
-                dictionaries = json.loads(data)
+                dictionaries = cls.from_json_string(data)
                 return [cls.create(**d) for d in dictionaries]
         except FileNotFoundError:
             return []

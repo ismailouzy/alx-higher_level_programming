@@ -12,9 +12,7 @@ if __name__ == '__main__':
                           passwd=sys.argv[2], db=sys.argv[3])
 
     cur = con.cursor()
-    cur.execute("SELECT * FROM states WHERE name LIKE BINARY\
-                %s ORDER BY id ASC",
-                (sys.argv[4], ))
+    cur.execute("SELECT * FROM states WHERE BINARY name = %s", [sys.argv[4]])
     rows = cur.fetchall()
 
     for i in rows:

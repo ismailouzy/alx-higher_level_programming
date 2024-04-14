@@ -13,6 +13,7 @@ if __name__ == '__main__':
 
     cur = con.cursor()
     cur.execute("SELECT * FROM states WHERE BINARY name = %s", [sys.argv[4]])
+
     rows = cur.fetchall()
 
     for i in rows:

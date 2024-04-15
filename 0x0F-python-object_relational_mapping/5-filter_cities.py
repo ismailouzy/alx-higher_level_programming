@@ -18,7 +18,8 @@ if __name__ == '__main__':
     rows = cur.fetchall()
 
     for i in rows:
-        print(i)
+        j.append(i[1])
+    print(", ".join(j))
 
     cur.close()
     con.close()

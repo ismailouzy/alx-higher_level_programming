@@ -4,6 +4,7 @@
 """
 import sys
 from model_state import Base, State
+from model_city import City
 from sqlalchemy import (create_engine)
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import asc
@@ -17,7 +18,7 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
     Base.metadata.create_all(engine)
-    new = session.query(State).join(State)
+    new = session.query(State, City).join(City).order_by(asc(City.id))
     for i, j in new.all():
         print("{}: ({:d}) {}".format(i.name, j.id, j.name))
     session.commit()
